@@ -28,7 +28,7 @@ todoApp.controller('TodoListController', function($scope) {
     todoList.addTodo = function() {
         // On rajoute dans le tableau todoList.todos le nouveau todo avec par défaut la valeur de done à false
         todoList.todos.push({
-            text: $scope.formNewTodo,
+            text: todoList.formNewTodo,
             done: false
         });
         // Ensuite on vide le champ
