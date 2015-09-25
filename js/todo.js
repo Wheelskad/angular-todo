@@ -33,5 +33,20 @@ todoApp.controller('TodoListController', function($scope) {
         });
         // Ensuite on vide le champ
         todoList.formNewTodo = '';
-    }
+    };
+
+    /**
+     * La fonction archive est exécuter lorsqu'on click sur le lien archive
+     */
+    todoList.archive = function() {
+        // On récupère la liste des todos fait ou pas
+        var oldTodos = todoList.todos;
+        // on vide le tableau des todos
+        todoList.todos = [];
+        // On parcours la liste des todos qu'on avait récupérer
+        angular.forEach(oldTodos, function(todo) {
+            // On vérifie si le todo est fait, sinon on le met dans le tableau des todos
+            if (!todo.done) todoList.todos.push(todo);
+        });
+    };
 });

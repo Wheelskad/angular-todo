@@ -17,8 +17,11 @@
 
         <!-- Le controller est une partie logique de notre code. -->
         <div class="container-fluid" ng-controller="TodoListController">
-            <span>1 of 2 remaining</span> [<a href="#">archive</a>]
+            <span>1 of 2 remaining</span>
+            <!-- On utilise le ng-click pour appeler la fonction archive -->
+            <a class="btn btn-danger" href ng-click="archive()">archive</a>
 
+            <hr>
             <ul class="list-group">
 
                 <!-- Avec la directive ng-repeat, angular va dupliquer le marqage HTML
