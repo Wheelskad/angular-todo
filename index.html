@@ -17,9 +17,12 @@
 
         <!-- Le controller est une partie logique de notre code. -->
         <div class="container-fluid" ng-controller="TodoListController">
-            <span>1 of 2 remaining</span>
+            <!-- Ici on exécute la fonction remaining qui nous retourne le nombre de todo restant.
+            Ensuite comme la liste des todos est disponible ici on fait juste un .length pour
+            savoir combien il y en a au total -->
+            <span>{{ remaining() }} of {{ todos.length }} remaining</span>
             <!-- On utilise le ng-click pour appeler la fonction archive -->
-            <a class="btn btn-danger" href ng-click="archive()">archive</a>
+            <a class="btn btn-danger" href="" ng-click="archive()">archive</a>
 
             <hr>
             <ul class="list-group">
