@@ -1,5 +1,5 @@
-AngularJs Formation...
-
+AngularJs Formation.
+------
 To start from fresh with a minimal html markup and basic file structure, clone the repository then from your git shell execute the following:
 
 ```
